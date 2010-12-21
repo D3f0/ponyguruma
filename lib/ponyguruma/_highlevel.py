@@ -178,7 +178,7 @@ class Regexp(BaseRegexp):
         result = []
         startstring = string[:pos]
         n = 0
-        push_match = (flag and result.append or result.extend)
+        push_match = (flat and result.append or result.extend)
         while 1:
             state = regexp_match(self, string, pos, endpos, False)
             if state is None:
